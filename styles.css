@@ -1,7 +1,5 @@
 body > div {
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
     height:80vw;
      width: 80vw;
      background-color: green;
