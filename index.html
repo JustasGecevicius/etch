@@ -9,6 +9,13 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-
+    <div class="inputs">
+        <p>Select your grid color!</p>
+    <input class="gridcolor" type="color" oninput="changeColor()"/>
+        <p>Select your background color!</p>
+    <input class="canvascolor" type="color" oninput="changeBackground()">
+    <p>Select your grid size!</p>
+    <input type="range" min="1" max="32" value="16" class="slider" oninput="resetGrid()">
+    </div>
 </body>
 </html>
