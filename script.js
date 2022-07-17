@@ -5,6 +5,7 @@ griddiv.style.gridTemplateColumns = `repeat(${16}, 1fr)`;
 griddiv.style.gridTemplateRows = `repeat(${16}, 1fr)`;
 griddiv.style.gap = "2px";
 griddiv.className = "griddiv";
+griddiv.style.borderRadius = "9px";
 
 body.appendChild(griddiv);
 const slide = document.querySelector(".slider");
