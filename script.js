@@ -4,6 +4,7 @@ const backgroundColor = document.querySelector(".canvascolor");
 griddiv.style.gridTemplateColumns = `repeat(${16}, 1fr)`;
 griddiv.style.gridTemplateRows = `repeat(${16}, 1fr)`;
 griddiv.style.gap = "2px";
+griddiv.style.backgroundColor = "white";
 griddiv.className = "griddiv";
 griddiv.style.borderRadius = "9px";
 
