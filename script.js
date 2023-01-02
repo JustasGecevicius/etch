@@ -1,6 +1,7 @@
 const griddiv = document.createElement("div");
 const body = document.querySelector("body");
 const backgroundColor = document.querySelector(".canvascolor");
+const gridSize = document.querySelector(".gridSize");
 griddiv.style.gridTemplateColumns = `repeat(${16}, 1fr)`;
 griddiv.style.gridTemplateRows = `repeat(${16}, 1fr)`;
 griddiv.style.gap = "2px";
@@ -11,7 +12,7 @@ griddiv.style.borderRadius = "9px";
 body.appendChild(griddiv);
 const slide = document.querySelector(".slider");
 
-let click = 1;
+let click = true;
 
 function changeColor() {
   const color = document.querySelector(".gridcolor");
@@ -19,7 +20,7 @@ function changeColor() {
 }
 
 const clickCheck = function () {
-  if (click == 1) {
+  if (click) {
     removeListeners();
   } else {
     returnListeners();
@@ -35,7 +36,7 @@ function removeListeners() {
   divs.forEach((elem) => {
     elem.removeEventListener("mouseover", colorChanger);
   });
-  click = 0;
+  click = false;
   console.log("removed");
 }
 function returnListeners() {
@@ -43,7 +44,7 @@ function returnListeners() {
   divs.forEach((elem) => {
     elem.addEventListener("mouseover", colorChanger);
   });
-  click = 1;
+  click = true;
   console.log("added");
 }
 
@@ -53,7 +54,7 @@ function resetGrid() {
     //removing the event listener so there are no more extra unclicks
     slide.removeEventListener("mouseup", create);
     let userInput = slide.value;
-
+    gridSize.innerHTML=userInput;
     setGaps(userInput);
     //first we need to delete the old grid pixels
     deleteOldGrid();
@@ -119,7 +120,6 @@ for (let i = 0; i < 16; i++) {
     let create = document.createElement("div");
     create.className = `div`;
     create.style.gridArea = `${j + 1},${i + 1},${j + 1},${i + 1}`;
-
     create.addEventListener("mouseover", colorChanger);
     griddiv.appendChild(create);
   }
