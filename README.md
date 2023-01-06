@@ -1,15 +1,25 @@
-# etch
-This is a web project to create a 16x16 grid of pixels that respond to the user hovering over the pixel, changing its color or other properties.
+# Etch a Sketch
 
-Step 1: completed the grid. when the user hover over the pixels they change the color.
+## Description
 
-Step 2: added the functionality for the user to choose the grid size.
+This is a project to create a grid with funcitonality that resembles an etch a sketch board. It has an adjustable board size, adjustable color and an adjustable background color. 
 
-Step 3: added the functionality for the user to toggle the ething on and off with a mouse click
+## Technologies used
 
-Step 4: Add the posibility for the user to choose the color in which they etch.
+### `HTML/CSS`
 
-Step 5: Add the random color option/rainbow effect. 
+HTML and CSS in this page is quite basic it arranges the squares into a grid of a specified size and then applies the css styling based on classes.
 
-Step 6???: allow for the user to choose the size of their brush...
+## `Javascript`
 
+This page leans heavily on Javascript. Each square of the board has a hover listener and the whole board has a click listener. When clicked the color changing hover effect is turned off or on. When the board size is changed, all of the elements in the board element are deleted and then repopulated with the correct number of squares that have certain classes applied to them. 
+
+## Problems encountered
+
+### Arranging the squares into a grid
+
+This problem was solved by using two loops to place the items in their corresponding places. One loop was used for the collumn and then another was used for the grid row.
+
+## Final Remarks
+
+This project was a good beginner project to allow me to learn how to work with grids and redisplaying certain elements. It has a few possible upgrades that can be added to it. For example the option for the color to be random on each hover or each mouse click or the ability to change  the brush size so that a few squares can be colored with a single hover. 
